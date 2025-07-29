@@ -1,9 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from typing import List, Optional
 
 class FeedbackRequest(BaseModel):
     question: str
     answer: str
-    rating: int
+    rating: int = Field(..., ge=1, le=10) 
 
 class AskRequest(BaseModel):
     question: str
@@ -11,3 +12,4 @@ class AskRequest(BaseModel):
 class AskResponse(BaseModel):
     answer: str
     source_question: str
+    related_questions: Optional[List[dict]] = None

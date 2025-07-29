@@ -1,32 +1,35 @@
-from fastapi import APIRouter
-import json
 import os
+import sqlite3
+from fastapi import APIRouter
 
 router = APIRouter()
 
-# Vendos rrugën e saktë absolute për feedback_data.json
+# Vendos rrugën absolute të databazës
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-feedback_path = os.path.join(BASE_DIR, "data", "feedback_data.json")
+DB_PATH = os.path.join(BASE_DIR, "data", "feedback.db")
 
 @router.get("/stats")
 def get_feedback_stats():
     try:
-        if not os.path.exists(feedback_path):
+        if not os.path.exists(DB_PATH):
+            return {"message": "Database not found.", "average_rating": None, "total_feedbacks": 0}
+
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        cursor.execute("SELECT rating FROM feedback")
+        ratings = [row[0] for row in cursor.fetchall()]
+        conn.close()
+
+        if not ratings:
             return {"message": "No feedback data found.", "average_rating": None, "total_feedbacks": 0}
 
-        with open(feedback_path, "r", encoding="utf-8") as f:
-            feedback_data = json.load(f)
-
-        if not feedback_data:
-            return {"message": "Feedback file is empty.", "average_rating": None, "total_feedbacks": 0}
-
-        ratings = [entry["rating"] for entry in feedback_data if "rating" in entry]
-        average_rating = sum(ratings) / len(ratings) if ratings else None
+        average_rating = sum(ratings) / len(ratings)
         total_feedbacks = len(ratings)
 
         return {
             "average_rating": average_rating,
             "total_feedbacks": total_feedbacks
         }
+
     except Exception as e:
         return {"error": str(e)}

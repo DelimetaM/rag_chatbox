@@ -3,6 +3,7 @@ from routes import ask
 from routes import feedback
 from routes import stats
 from data.database import insert_feedback, init_db
+from routes import stats
 
 app = FastAPI()
 
