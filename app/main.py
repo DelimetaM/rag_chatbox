@@ -1,16 +1,15 @@
 from fastapi import FastAPI
 from routes import ask
-from routes import feedback  # shtojmë këtë
-from models.database.database import init_db
+from routes import feedback
 from routes import stats
+from data.database import insert_feedback, init_db
 
 app = FastAPI()
 
 # Inicializo DB kur nis app-i
-def init_db():
-    print("DB initialized (placeholder)")
-    
+init_db()
+
 # Routes
 app.include_router(ask.router)
-app.include_router(feedback.router)  # shtojmë këtë
+app.include_router(feedback.router)
 app.include_router(stats.router)

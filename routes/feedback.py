@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from models.request_models import FeedbackRequest
-from models.database.database import insert_feedback
+from data.database import insert_feedback
 
 router = APIRouter()
 
