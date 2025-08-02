@@ -3,7 +3,10 @@ import sqlite3
 from fastapi import APIRouter, Depends
 from app.auth.auth import get_current_user
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/stats",
+    tags=["Stats"]
+)
 
 # Rruga absolute për databazën SQLite
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
