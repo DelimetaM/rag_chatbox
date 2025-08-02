@@ -23,9 +23,21 @@ embeddings = model.encode(questions)
 index = faiss.IndexFlatL2(embeddings.shape[1])
 index.add(np.array(embeddings))
 
-# Funksion që gjen dokumentin më të afërt
+# ✅ Funksion për embedding të tekstit
+def embed_text(text: str):
+    return model.encode([text])[0]
+
+# ✅ Funksion për cosine similarity
+def cosine_similarity(vec1, vec2):
+    return float(np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2)))
+
+# ✅ Funksion për të gjetur dokumentin më të afërt (default)
 def retrieve_relevant_docs(query: str):
     query_embedding = model.encode([query])
     D, I = index.search(np.array(query_embedding), k=1)
     idx = I[0][0]
     return faq_data[idx]
+
+# ✅ Merr gjithë datasetin
+def get_all_docs():
+    return faq_data

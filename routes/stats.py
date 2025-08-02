@@ -1,18 +1,23 @@
 import os
 import sqlite3
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from app.auth.auth import get_current_user
 
 router = APIRouter()
 
-# Vendos rrugën absolute të databazës
+# Rruga absolute për databazën SQLite
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(BASE_DIR, "data", "feedback.db")
 
 @router.get("/stats")
-def get_feedback_stats():
+def get_feedback_stats(user: dict = Depends(get_current_user)):
     try:
         if not os.path.exists(DB_PATH):
-            return {"message": "Database not found.", "average_rating": None, "total_feedbacks": 0}
+            return {
+                "message": "Database not found.",
+                "average_rating": None,
+                "total_feedbacks": 0
+            }
 
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
@@ -21,13 +26,17 @@ def get_feedback_stats():
         conn.close()
 
         if not ratings:
-            return {"message": "No feedback data found.", "average_rating": None, "total_feedbacks": 0}
+            return {
+                "message": "No feedback data found.",
+                "average_rating": None,
+                "total_feedbacks": 0
+            }
 
         average_rating = sum(ratings) / len(ratings)
         total_feedbacks = len(ratings)
 
         return {
-            "average_rating": average_rating,
+            "average_rating": round(average_rating, 2),
             "total_feedbacks": total_feedbacks
         }
 
