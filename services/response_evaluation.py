@@ -1,29 +1,21 @@
-import re
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+
+# Inicializo modelin një herë
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+def normalize_text(text: str) -> str:
+    """Normalizon tekstin: heq whitespaces të tepërta, bën lower-case dhe bashkon fjalitë."""
+    return " ".join(text.strip().lower().split())
 
 def compute_quality_score(question: str, answer: str) -> float:
-    """
-    Llogarit cilësinë e përgjigjes bazuar në mbivendosjen e fjalëve (token overlap)
-    midis pyetjes dhe përgjigjes. Jep një rezultat nga 0.0 në 1.0.
+    # Normalizo tekstet para embeddings
+    question_norm = normalize_text(question)
+    answer_norm = normalize_text(answer)
 
-    :param question: Pyetja e përdoruesit
-    :param answer: Përgjigja e gjeneruar
-    :return: quality_score si float me 2 shifra dhjetore
-    """
+    question_emb = model.encode([question_norm])[0].reshape(1, -1)
+    answer_emb = model.encode([answer_norm])[0].reshape(1, -1)
 
-    def tokenize(text):
-        # Heq shenjat e pikësimit dhe e kthen tekstin në fjalë të vogla
-        text = re.sub(r'[^\w\s]', '', text.lower())
-        return set(text.split())
-
-    # Krijon fjalët unike për pyetjen dhe përgjigjen
-    q_tokens = tokenize(question)
-    a_tokens = tokenize(answer)
-
-    if not q_tokens:
-        return 0.0
-
-    # Llogarit fjalët e përbashkëta
-    overlap = q_tokens.intersection(a_tokens)
-    score = len(overlap) / len(q_tokens)
-
-    return round(score, 2)
+    similarity = cosine_similarity(question_emb, answer_emb)[0][0]
+    return round(float(similarity), 2)

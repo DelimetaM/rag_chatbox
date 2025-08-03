@@ -2,301 +2,361 @@
   {
     "id": "1",
     "question": "What are the common Cyberattacks?",
-    "answer": "Common cyberattacks include phishing, social engineering, ransomware, cryptocurrency hijacking, and botnet attacks."
+    "answer": "Common cyberattacks include phishing, social engineering, ransomware, cryptocurrency hijacking, and botnet attacks.",
+    "weight": 0.0
   },
   {
     "id": "2",
     "question": "What are the elements of cyber security?",
-    "answer": "Elements of cyber security include application security, information security, network security, disaster recovery, operational security, and end-user education."
+    "answer": "Elements of cyber security include application security, information security, network security, disaster recovery, operational security, and end-user education.",
+    "weight": 0.0
   },
   {
     "id": "3",
     "question": "Define DNS",
-    "answer": "DNS translates domain names into IP addresses so browsers can load Internet resources."
+    "answer": "DNS translates domain names into IP addresses so browsers can load Internet resources.",
+    "weight": 0.0
   },
   {
     "id": "4",
     "question": "What is a Firewall?",
-    "answer": "A firewall is a network security system that monitors and controls incoming and outgoing traffic based on security rules."
+    "answer": "A firewall is a network security system that monitors and controls incoming and outgoing traffic based on security rules.",
+    "weight": 0.0
   },
   {
     "id": "5",
     "question": "What is a VPN?",
-    "answer": "A VPN creates a secure, encrypted connection over a public network to protect data and user identity."
+    "answer": "A VPN creates a secure, encrypted connection over a public network to protect data and user identity.",
+    "weight": 0.0
   },
   {
     "id": "6",
     "question": "What are the different sources of malware?",
-    "answer": "Sources of malware include worms, spyware, ransomware, viruses, trojans, and adware."
+    "answer": "Sources of malware include worms, spyware, ransomware, viruses, trojans, and adware.",
+    "weight": 0.0
   },
   {
     "id": "7",
     "question": "How does email work?",
-    "answer": "Email uses SMTP to send messages, which are stored on servers and retrieved via POP or IMAP protocols."
+    "answer": "Email uses SMTP to send messages, which are stored on servers and retrieved via POP or IMAP protocols.",
+    "weight": 0.0
   },
   {
     "id": "8",
     "question": "What is a social engineering attack?",
-    "answer": "Social engineering tricks individuals into giving away confidential information by exploiting human behavior."
+    "answer": "Social engineering tricks individuals into giving away confidential information by exploiting human behavior.",
+    "weight": 0.0
   },
   {
     "id": "9",
     "question": "Who are black hat hackers and white hat hackers?",
-    "answer": "White hat hackers are ethical security experts, while black hat hackers are criminals who exploit vulnerabilities."
+    "answer": "White hat hackers are ethical security experts, while black hat hackers are criminals who exploit vulnerabilities.",
+    "weight": 0.0
   },
   {
     "id": "10",
     "question": "What is encryption?",
-    "answer": "Encryption is the process of converting readable data into an unreadable format to protect it from unauthorized access."
+    "answer": "Encryption is the process of converting readable data into an unreadable format to protect it from unauthorized access.",
+    "weight": 0.0
   },
   {
     "id": "11",
     "question": "Define encryption and decryption?",
-    "answer": "Encryption is the process of transforming an ordinary message (plaintext) into a meaningless message (ciphertext). Decryption is the process of transforming the ciphertext back into its original form. Encryption ensures data cannot be understood without a decryption key."
+    "answer": "Encryption is the process of transforming an ordinary message (plaintext) into a meaningless message (ciphertext). Decryption is the process of transforming the ciphertext back into its original form. Encryption ensures data cannot be understood without a decryption key.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "12",
     "question": "What is the difference between plaintext and cleartext?",
-    "answer": "Plaintext is data in its original readable form before encryption. Cleartext is also readable data, but it was never meant to be encrypted. Both are human-readable, but plaintext usually refers to data before encryption."
+    "answer": "Plaintext is data in its original readable form before encryption. Cleartext is also readable data, but it was never meant to be encrypted. Both are human-readable, but plaintext usually refers to data before encryption.",
+    "weight": 0.0
   },
   {
     "id": "13",
     "question": "What is a block cipher?",
-    "answer": "A block cipher is an encryption method that processes data in fixed-size blocks (e.g., 64-bit or 128-bit). It uses symmetric keys and operates in modes like ECB (Electronic Code Book) and CBC (Cipher Block Chaining)."
+    "answer": "A block cipher is an encryption method that processes data in fixed-size blocks (e.g., 64-bit or 128-bit). It uses symmetric keys and operates in modes like ECB (Electronic Code Book) and CBC (Cipher Block Chaining).",
+    "weight": 0.0
   },
-   {
+  {
     "id": "14",
     "question": "What is the CIA triangle?",
-    "answer": "The CIA triangle refers to the foundational principles of information security: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data accuracy), and Availability (ensuring data is accessible when needed)."
+    "answer": "The CIA triangle refers to the foundational principles of information security: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data accuracy), and Availability (ensuring data is accessible when needed).",
+    "weight": 0.0
   },
-   {
+  {
     "id": "15",
     "question": "What is the Three-way handshake?",
-    "answer": "The TCP three-way handshake is used to establish a reliable connection. It involves three steps: the client sends a SYN packet, the server responds with SYN-ACK, and the client replies with ACK. This ensures both sides are synchronized."
+    "answer": "The TCP three-way handshake is used to establish a reliable connection. It involves three steps: the client sends a SYN packet, the server responds with SYN-ACK, and the client replies with ACK. This ensures both sides are synchronized.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "16",
     "question": "How can identity theft be prevented?",
-    "answer": "To prevent identity theft, use strong and unique passwords, enable two-factor authentication, avoid sharing personal information, avoid suspicious software or links, and verify the authenticity of websites before entering sensitive data."
+    "answer": "To prevent identity theft, use strong and unique passwords, enable two-factor authentication, avoid sharing personal information, avoid suspicious software or links, and verify the authenticity of websites before entering sensitive data.",
+    "weight": 0.0
   },
   {
     "id": "17",
     "question": "What are some common Hashing functions?",
-    "answer": "Hashing functions convert data into fixed-size hash values. Common methods include Division Method, Mid Square Method, Folding Method, and Multiplication Method. These are used in data indexing and security applications."
+    "answer": "Hashing functions convert data into fixed-size hash values. Common methods include Division Method, Mid Square Method, Folding Method, and Multiplication Method. These are used in data indexing and security applications.",
+    "weight": 0.0
   },
   {
     "id": "18",
     "question": "What do you mean by two-factor authentication?",
-    "answer": "Two-factor authentication (2FA) is a security process where users verify their identity using two independent methods, such as a password and a code sent to their phone. It adds an extra layer of protection to systems and accounts."
+    "answer": "Two-factor authentication (2FA) is a security process where users verify their identity using two independent methods, such as a password and a code sent to their phone. It adds an extra layer of protection to systems and accounts.",
+    "weight": 0.0
   },
   {
     "id": "19",
     "question": "What does XSS stand for? How can it be prevented?",
-    "answer": "XSS stands for Cross-Site Scripting, a vulnerability in web applications that allows attackers to inject malicious scripts into web pages viewed by other users. To prevent XSS, validate and sanitize all user input, encode output properly depending on the context (HTML, JavaScript, URL, etc.), use secure response headers, and implement a Content Security Policy (CSP) to limit the execution of scripts."
+    "answer": "XSS stands for Cross-Site Scripting, a vulnerability in web applications that allows attackers to inject malicious scripts into web pages viewed by other users. To prevent XSS, validate and sanitize all user input, encode output properly depending on the context (HTML, JavaScript, URL, etc.), use secure response headers, and implement a Content Security Policy (CSP) to limit the execution of scripts.",
+    "weight": 0.0
   },
   {
     "id": "20",
     "question": "What do you mean by Shoulder Surfing?",
-    "answer": "Shoulder surfing is a type of attack where an attacker observes someone’s private information by watching their screen or keyboard. This is often done in public places where a person may be entering passwords or sensitive data, and can lead to data theft and privacy invasion."
+    "answer": "Shoulder surfing is a type of attack where an attacker observes someone’s private information by watching their screen or keyboard. This is often done in public places where a person may be entering passwords or sensitive data, and can lead to data theft and privacy invasion.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "21",
     "question": "What is the difference between hashing and encryption?",
-    "answer": "Hashing is a one-way function that converts data into a fixed-size string (hash) and cannot be reversed to get the original data. It’s mainly used for data integrity. Encryption, on the other hand, is a two-way function that encodes data into ciphertext, which can be decrypted back using a key. Encryption ensures confidentiality, while hashing ensures integrity."
+    "answer": "Hashing is a one-way function that converts data into a fixed-size string (hash) and cannot be reversed to get the original data. It’s mainly used for data integrity. Encryption, on the other hand, is a two-way function that encodes data into ciphertext, which can be decrypted back using a key. Encryption ensures confidentiality, while hashing ensures integrity.",
+    "weight": 0.0
   },
   {
     "id": "22",
     "question": "Differentiate between Information security and information assurance.",
-    "answer": "Information security focuses on protecting data from unauthorized access, disclosure, and alteration, ensuring confidentiality, integrity, and availability. Information assurance, however, is a broader discipline that also includes managing risks related to the processing, storage, and transmission of information, ensuring data authenticity, non-repudiation, and availability throughout its lifecycle."
+    "answer": "Information security focuses on protecting data from unauthorized access, disclosure, and alteration, ensuring confidentiality, integrity, and availability. Information assurance, however, is a broader discipline that also includes managing risks related to the processing, storage, and transmission of information, ensuring data authenticity, non-repudiation, and availability throughout its lifecycle.",
+    "weight": 0.0
   },
   {
     "id": "23",
     "question": "Write a difference between HTTPS and SSL.",
-    "answer": "HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses SSL/TLS for encryption to ensure secure communication over the web. SSL (Secure Sockets Layer) is a cryptographic protocol used to secure communications. While HTTPS is a protocol used by websites, SSL is a security layer that enables HTTPS by encrypting data."
+    "answer": "HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses SSL/TLS for encryption to ensure secure communication over the web. SSL (Secure Sockets Layer) is a cryptographic protocol used to secure communications. While HTTPS is a protocol used by websites, SSL is a security layer that enables HTTPS by encrypting data.",
+    "weight": 0.0
   },
-    {
+  {
     "id": "24",
     "question": "What do you mean by System Hardening?",
-    "answer": "System hardening is the process of reducing a system's attack surface by removing unnecessary services, updating software, changing default configurations, and implementing best security practices. Its goal is to make systems more robust and secure against attacks by minimizing vulnerabilities such as open ports, default passwords, or misconfigured settings."
+    "answer": "System hardening is the process of reducing a system's attack surface by removing unnecessary services, updating software, changing default configurations, and implementing best security practices. Its goal is to make systems more robust and secure against attacks by minimizing vulnerabilities such as open ports, default passwords, or misconfigured settings.",
+    "weight": 0.0
   },
   {
     "id": "25",
     "question": "Differentiate between spear phishing and phishing.",
-    "answer": "Phishing is a broad email-based attack where attackers impersonate trusted entities to trick users into providing sensitive information. Spear phishing, on the other hand, is a more targeted version aimed at specific individuals or organizations, using personalized content to increase the chances of success."
+    "answer": "Phishing is a broad email-based attack where attackers impersonate trusted entities to trick users into providing sensitive information. Spear phishing, on the other hand, is a more targeted version aimed at specific individuals or organizations, using personalized content to increase the chances of success.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "26",
     "question": "What do you mean by Perfect Forward Secrecy?",
-    "answer": "Perfect Forward Secrecy (PFS) is a security feature that ensures each session uses a unique encryption key. Even if one session key is compromised, past communications remain secure. It enhances user privacy by regularly regenerating session keys between the client and server."
+    "answer": "Perfect Forward Secrecy (PFS) is a security feature that ensures each session uses a unique encryption key. Even if one session key is compromised, past communications remain secure. It enhances user privacy by regularly regenerating session keys between the client and server.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "27",
     "question": "How to prevent MITM?",
-    "answer": "To prevent Man-in-the-Middle (MITM) attacks:\n- Use strong WEP/WPA encryption on wireless access points.\n- Set strong router login credentials.\n- Use a Virtual Private Network (VPN) for secure connections over public or untrusted networks."
+    "answer": "To prevent Man-in-the-Middle (MITM) attacks:\n- Use strong WEP/WPA encryption on wireless access points.\n- Set strong router login credentials.\n- Use a Virtual Private Network (VPN) for secure connections over public or untrusted networks.",
+    "weight": 0.0
   },
   {
     "id": "28",
     "question": "What is ransomware?",
-    "answer": "Ransomware is a type of malicious software that encrypts a user's data, making it inaccessible. Cybercriminals demand payment, often in cryptocurrency, to provide the decryption key. It is commonly spread through phishing emails or malicious downloads."
+    "answer": "Ransomware is a type of malicious software that encrypts a user's data, making it inaccessible. Cybercriminals demand payment, often in cryptocurrency, to provide the decryption key. It is commonly spread through phishing emails or malicious downloads.",
+    "weight": 0.0
   },
- {
+  {
     "id": "29",
     "question": "What is Public Key Infrastructure?",
-    "answer": "Public Key Infrastructure (PKI) is a system used to manage digital keys and certificates. It ensures secure electronic communication by using public-private key pairs. PKI supports authentication, encryption, and digital signatures, and is vital for protecting sensitive data online."
+    "answer": "Public Key Infrastructure (PKI) is a system used to manage digital keys and certificates. It ensures secure electronic communication by using public-private key pairs. PKI supports authentication, encryption, and digital signatures, and is vital for protecting sensitive data online.",
+    "weight": 0.0
   },
   {
     "id": "30",
     "question": "What is Spoofing?",
-    "answer": "Spoofing is a type of attack on computing devices in which an attacker attempts to steal the identity of a legitimate user and pretend to be someone else. This type of attack is performed to compromise system security or steal user information.\n\nTypes of Spoofing:\n- IP Spoofing: IP is a network protocol that allows messages to be sent and received over the Internet. The sender's IP address is included in the message header of all emails.\n- ARP Spoofing: A hacking technique that redirects network traffic to hackers, spying on LAN addresses.\n- Email Spoofing: A common form of identity theft where phishers send emails impersonating banks, corporations, or officials."
+    "answer": "Spoofing is a type of attack on computing devices in which an attacker attempts to steal the identity of a legitimate user and pretend to be someone else. This type of attack is performed to compromise system security or steal user information.\n\nTypes of Spoofing:\n- IP Spoofing: IP is a network protocol that allows messages to be sent and received over the Internet. The sender's IP address is included in the message header of all emails.\n- ARP Spoofing: A hacking technique that redirects network traffic to hackers, spying on LAN addresses.\n- Email Spoofing: A common form of identity theft where phishers send emails impersonating banks, corporations, or officials.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "31",
     "question": "What are the steps involved in hacking a server or network?",
-    "answer": "The following steps are commonly used in hacking a server or network:\n- Access the web server.\n- Use anonymous FTP to gather information and scan ports.\n- Monitor file sizes, open ports, and running processes.\n- Execute commands like \"clear cache\" or \"delete files\" to reveal stored data.\n- Connect to other network sites to gather deleted data.\n- Use tools like Metasploit to gain remote access and gather more internal information."
+    "answer": "The following steps are commonly used in hacking a server or network:\n- Access the web server.\n- Use anonymous FTP to gather information and scan ports.\n- Monitor file sizes, open ports, and running processes.\n- Execute commands like \"clear cache\" or \"delete files\" to reveal stored data.\n- Connect to other network sites to gather deleted data.\n- Use tools like Metasploit to gain remote access and gather more internal information.",
+    "weight": 0.0
   },
   {
     "id": "32",
     "question": "What are the various sniffing tools?",
-    "answer": "Some popular network sniffing tools include:\n- Auvik\n- SolarWinds Network Packet Sniffer\n- Wireshark\n- Paessler PRTG\n- ManageEngine NetFlow Analyzer\n- Tcpdump\n- WinDump\n- NetworkMiner"
+    "answer": "Some popular network sniffing tools include:\n- Auvik\n- SolarWinds Network Packet Sniffer\n- Wireshark\n- Paessler PRTG\n- ManageEngine NetFlow Analyzer\n- Tcpdump\n- WinDump\n- NetworkMiner",
+    "weight": 0.0
   },
   {
     "id": "33",
     "question": "What is SQL injection?",
-    "answer": "SQL injection is a technique where an attacker exploits user input fields to inject SQL statements, allowing unauthorized access or manipulation of a database.\n\nTo prevent SQL injection:\n- Validate input length, type, and format.\n- Restrict user access levels.\n- Avoid using administrator accounts for application access."
+    "answer": "SQL injection is a technique where an attacker exploits user input fields to inject SQL statements, allowing unauthorized access or manipulation of a database.\n\nTo prevent SQL injection:\n- Validate input length, type, and format.\n- Restrict user access levels.\n- Avoid using administrator accounts for application access.",
+    "weight": 0.0
   },
   {
     "id": "34",
     "question": "What is a Distributed Denial of Service attack (DDoS)?",
-    "answer": "A DDoS attack is aimed at disrupting access to a system or network by overwhelming it with traffic from multiple sources. The goal is to make services unavailable to legitimate users by exhausting resources or bandwidth."
+    "answer": "A DDoS attack is aimed at disrupting access to a system or network by overwhelming it with traffic from multiple sources. The goal is to make services unavailable to legitimate users by exhausting resources or bandwidth.",
+    "weight": 0.0
   },
   {
     "id": "35",
     "question": "How to avoid ARP poisoning?",
-    "answer": "To avoid ARP poisoning, you can follow several practices:\n\n1. Static ARP Tables: Manually define correct MAC-to-IP address mappings. Though effective, it's hard to maintain.\n2. Switch Security: Use features like Dynamic ARP Inspection (DAI) on switches to filter malicious ARP packets.\n3. Physical Security: Restrict physical access to prevent attackers from joining the local network.\n4. Network Isolation: Segment networks into subnets so an attack affects only part of the system.\n5. Encryption: While it doesn’t prevent poisoning, it limits the impact by protecting sensitive data even if intercepted."
+    "answer": "To avoid ARP poisoning, you can follow several practices:\n\n1. Static ARP Tables: Manually define correct MAC-to-IP address mappings. Though effective, it's hard to maintain.\n2. Switch Security: Use features like Dynamic ARP Inspection (DAI) on switches to filter malicious ARP packets.\n3. Physical Security: Restrict physical access to prevent attackers from joining the local network.\n4. Network Isolation: Segment networks into subnets so an attack affects only part of the system.\n5. Encryption: While it doesn’t prevent poisoning, it limits the impact by protecting sensitive data even if intercepted.",
+    "weight": 0.0
   },
   {
     "id": "36",
     "question": "What is a proxy firewall?",
-    "answer": "A proxy firewall filters traffic at the application layer by using a proxy server to emulate services. It acts as an intermediary between users and web services, inspecting data like HTTP or SMTP requests before allowing or blocking them. It provides deeper inspection and improved security over traditional firewalls."
+    "answer": "A proxy firewall filters traffic at the application layer by using a proxy server to emulate services. It acts as an intermediary between users and web services, inspecting data like HTTP or SMTP requests before allowing or blocking them. It provides deeper inspection and improved security over traditional firewalls.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "37",
     "question": "Explain SSL Encryption.",
-    "answer": "SSL (Secure Socket Layer) encryption ensures secure data transfer between web browsers and servers. It encrypts all communication, protecting sensitive data from eavesdropping or tampering. SSL protocols authenticate the server, establish secure sessions, and use encryption keys to keep information private."
+    "answer": "SSL (Secure Socket Layer) encryption ensures secure data transfer between web browsers and servers. It encrypts all communication, protecting sensitive data from eavesdropping or tampering. SSL protocols authenticate the server, establish secure sessions, and use encryption keys to keep information private.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "38",
     "question": "What do you mean by penetration testing?",
-    "answer": "Penetration testing is a security process where ethical hackers simulate cyberattacks on systems to uncover vulnerabilities. The goal is to identify weaknesses before real attackers do. It's a proactive method to improve security posture and is commonly used in ethical hacking."
+    "answer": "Penetration testing is a security process where ethical hackers simulate cyberattacks on systems to uncover vulnerabilities. The goal is to identify weaknesses before real attackers do. It's a proactive method to improve security posture and is commonly used in ethical hacking.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "39",
     "question": "What are the risks associated with public Wi-Fi?",
-    "answer": "Public Wi-Fi networks pose multiple risks such as:\n- Malware, viruses, and worms spreading across the network\n- Rogue networks impersonating legitimate ones\n- Unencrypted connections allowing data interception\n- Network snooping by attackers monitoring traffic\n- Login credential theft\n- Fake system updates leading to attacks\n- Session hijacking compromising active sessions"
+    "answer": "Public Wi-Fi networks pose multiple risks such as:\n- Malware, viruses, and worms spreading across the network\n- Rogue networks impersonating legitimate ones\n- Unencrypted connections allowing data interception\n- Network snooping by attackers monitoring traffic\n- Login credential theft\n- Fake system updates leading to attacks\n- Session hijacking compromising active sessions",
+    "weight": 0.0
   },
   {
     "id": "40",
     "question": "Explain the main difference between Diffie-Hellman and RSA.",
-    "answer": "Diffie-Hellman is a key exchange protocol that allows two parties to securely establish a shared secret over a public channel, using symmetric cryptography. RSA is an asymmetric encryption method that uses a pair of public and private keys, allowing messages encrypted with one key to be decrypted with the other."
+    "answer": "Diffie-Hellman is a key exchange protocol that allows two parties to securely establish a shared secret over a public channel, using symmetric cryptography. RSA is an asymmetric encryption method that uses a pair of public and private keys, allowing messages encrypted with one key to be decrypted with the other.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "41",
     "question": "Give some examples of asymmetric encryption algorithms.",
-    "answer": "Examples of asymmetric encryption algorithms include RSA, ElGamal, ECC (Elliptic Curve Cryptography), and DSA (Digital Signature Algorithm). These algorithms use a public-private key pair to encrypt and decrypt data securely, typically for small data sizes."
+    "answer": "Examples of asymmetric encryption algorithms include RSA, ElGamal, ECC (Elliptic Curve Cryptography), and DSA (Digital Signature Algorithm). These algorithms use a public-private key pair to encrypt and decrypt data securely, typically for small data sizes.",
+    "weight": 0.0
   },
-   {
+  {
     "id": "42",
     "question": "Explain social engineering and its attacks.",
-    "answer": "Social engineering is a manipulation technique that exploits human error to gain private information or access. Common attacks include impersonation (posing as trusted figures), phishing (fake emails or sites), vishing (voice phishing via phone calls), and smishing (SMS-based phishing)."
+    "answer": "Social engineering is a manipulation technique that exploits human error to gain private information or access. Common attacks include impersonation (posing as trusted figures), phishing (fake emails or sites), vishing (voice phishing via phone calls), and smishing (SMS-based phishing).",
+    "weight": 0.0
   },
-   {
+  {
     "id": "43",
     "question": "State the difference between a virus and worm.",
-    "answer": "A virus is malicious code attached to legitimate files or programs, requiring user action to spread. A worm is self-replicating malware that spreads independently over networks, often consuming system resources without user intervention."
+    "answer": "A virus is malicious code attached to legitimate files or programs, requiring user action to spread. A worm is self-replicating malware that spreads independently over networks, often consuming system resources without user intervention.",
+    "weight": 0.0
   },
   {
-  "id": "44",
-  "question": "Explain the concept of session hijacking.",
-  "answer": "Session hijacking is a security attack where an attacker takes control of a user session over a protected network. The attacker impersonates a legitimate user by stealing or manipulating session information, often through methods like IP spoofing. Since authentication typically occurs only at the beginning of a session, hijacking becomes possible once access is gained.\n\nCommon types of session hijacking include:\n- Packet Sniffing\n- CSRF (Cross-site Request Forgery)\n- Cross-site Scripting (XSS)\n- IP Spoofing"
-},
+    "id": "44",
+    "question": "Explain the concept of session hijacking.",
+    "answer": "Session hijacking is a security attack where an attacker takes control of a user session over a protected network. The attacker impersonates a legitimate user by stealing or manipulating session information, often through methods like IP spoofing. Since authentication typically occurs only at the beginning of a session, hijacking becomes possible once access is gained.\n\nCommon types of session hijacking include:\n- Packet Sniffing\n- CSRF (Cross-site Request Forgery)\n- Cross-site Scripting (XSS)\n- IP Spoofing",
+    "weight": 0.0
+  },
   {
-  "id": "45",
-  "question": "Explain the honeypot and its types.",
-  "answer": "A honeypot is a networked system designed to attract cyber attackers and allow security professionals to detect, analyze, and learn from unauthorized access attempts. It acts as a decoy to distract attackers from real systems and provides insight into attacker behavior.\n\nTypes of honeypots:\n- Research honeypots: Used by researchers to study hacking techniques and develop preventive strategies.\n- Production honeypots: Deployed in live networks to serve as decoys that distract attackers and give administrators time to address vulnerabilities in real systems."
-},
+    "id": "45",
+    "question": "Explain the honeypot and its types.",
+    "answer": "A honeypot is a networked system designed to attract cyber attackers and allow security professionals to detect, analyze, and learn from unauthorized access attempts. It acts as a decoy to distract attackers from real systems and provides insight into attacker behavior.\n\nTypes of honeypots:\n- Research honeypots: Used by researchers to study hacking techniques and develop preventive strategies.\n- Production honeypots: Deployed in live networks to serve as decoys that distract attackers and give administrators time to address vulnerabilities in real systems.",
+    "weight": 0.0
+  },
   {
-  "id": "46",
-  "question": "What do you mean by a Null Session?",
-  "answer": "A Null Session is an anonymous connection to a Windows system using no username or password. It can allow attackers to remotely access system information such as user accounts and shares without authentication. Although more difficult on modern systems, older versions like Windows XP and Server 2003 are still vulnerable if not properly secured."
-},
+    "id": "46",
+    "question": "What do you mean by a Null Session?",
+    "answer": "A Null Session is an anonymous connection to a Windows system using no username or password. It can allow attackers to remotely access system information such as user accounts and shares without authentication. Although more difficult on modern systems, older versions like Windows XP and Server 2003 are still vulnerable if not properly secured.",
+    "weight": 0.0
+  },
   {
-  "id": "47",
-  "question": "What is IP blocklisting?",
-  "answer": "IP blocklisting is a security technique used to block access from specific IP addresses or ranges that are known to be malicious or unauthorized. These IP addresses are added to a blacklist to prevent them from connecting to a network, service, or system, reducing the risk of cyberattacks such as brute force attempts or botnet traffic."
-},
+    "id": "47",
+    "question": "What is IP blocklisting?",
+    "answer": "IP blocklisting is a security technique used to block access from specific IP addresses or ranges that are known to be malicious or unauthorized. These IP addresses are added to a blacklist to prevent them from connecting to a network, service, or system, reducing the risk of cyberattacks such as brute force attempts or botnet traffic.",
+    "weight": 0.0
+  },
   {
-  "id": "48",
-  "question": "What are Polymorphic viruses?",
-  "answer": "Polymorphic viruses are advanced types of malware that change their code or appearance with each infection to avoid detection by antivirus software. The term comes from 'poly' meaning many, and 'morphic' meaning forms. These viruses include a mutation engine and an encrypted virus body. Each time the virus replicates, it generates a new decryption routine, making it difficult for traditional signature-based detection tools to recognize them consistently."
-},
+    "id": "48",
+    "question": "What are Polymorphic viruses?",
+    "answer": "Polymorphic viruses are advanced types of malware that change their code or appearance with each infection to avoid detection by antivirus software. The term comes from 'poly' meaning many, and 'morphic' meaning forms. These viruses include a mutation engine and an encrypted virus body. Each time the virus replicates, it generates a new decryption routine, making it difficult for traditional signature-based detection tools to recognize them consistently.",
+    "weight": 0.0
+  },
   {
-  "id": "49",
-  "question": "What is a Botnet?",
-  "answer": "A botnet (short for 'robot network') is a group of internet-connected devices infected with malware and controlled by a single attacker, often called a 'bot herder'. Each infected device, known as a bot, can be remotely directed to perform malicious tasks such as sending spam, launching DDoS attacks, or stealing data."
-},
+    "id": "49",
+    "question": "What is a Botnet?",
+    "answer": "A botnet (short for 'robot network') is a group of internet-connected devices infected with malware and controlled by a single attacker, often called a 'bot herder'. Each infected device, known as a bot, can be remotely directed to perform malicious tasks such as sending spam, launching DDoS attacks, or stealing data.",
+    "weight": 0.0
+  },
   {
-  "id": "50",
-  "question": "What is an Eavesdropping Attack?",
-  "answer": "An eavesdropping attack happens when a hacker intercepts, listens to, or alters data as it is transmitted between devices. It is also called sniffing or snooping. These attacks usually exploit unsecured or weakly secured network communications to capture sensitive information such as passwords, messages, or personal data."
-},
+    "id": "50",
+    "question": "What is an Eavesdropping Attack?",
+    "answer": "An eavesdropping attack happens when a hacker intercepts, listens to, or alters data as it is transmitted between devices. It is also called sniffing or snooping. These attacks usually exploit unsecured or weakly secured network communications to capture sensitive information such as passwords, messages, or personal data.",
+    "weight": 0.0
+  },
   {
-  "id": "51",
-  "question": "What is the man-in-the-middle attack?",
-  "answer": "This is a type of cyber attack where the attacker secretly intercepts and possibly alters communication between two parties. Both parties believe they are communicating directly with each other, but the attacker controls the flow of information. This can lead to stolen data, session hijacking, or injection of malicious content."
-},
+    "id": "51",
+    "question": "What is the man-in-the-middle attack?",
+    "answer": "This is a type of cyber attack where the attacker secretly intercepts and possibly alters communication between two parties. Both parties believe they are communicating directly with each other, but the attacker controls the flow of information. This can lead to stolen data, session hijacking, or injection of malicious content.",
+    "weight": 0.0
+  },
   {
-  "id": "52",
-  "question": "What is a traceroute? Why is it used?",
-  "answer": "Traceroute is a commonly used command-line tool found on almost all operating systems. It shows the complete path taken by packets to reach a destination address and measures delays between each intermediate router.\n\nUses of traceroute:\n- Helps identify where data transmission is failing\n- Provides a route map from source to destination\n- Uses ICMP (Internet Control Message Protocol) packets\n- Can be visualized to show each hop along the route"
-},
+    "id": "52",
+    "question": "What is a traceroute? Why is it used?",
+    "answer": "Traceroute is a commonly used command-line tool found on almost all operating systems. It shows the complete path taken by packets to reach a destination address and measures delays between each intermediate router.\n\nUses of traceroute:\n- Helps identify where data transmission is failing\n- Provides a route map from source to destination\n- Uses ICMP (Internet Control Message Protocol) packets\n- Can be visualized to show each hop along the route",
+    "weight": 0.0
+  },
   {
-  "id": "53",
-  "question": "What is the difference between HIDS and NIDS?",
-  "answer": "HIDS (Host-based Intrusion Detection System) monitors and analyzes activities within a specific host such as a PC or server. It works by examining internal files and comparing current snapshots to previously taken ones to detect changes, indicating possible attacks.\n\nNIDS (Network-based Intrusion Detection System) monitors network traffic across multiple devices. It is deployed at key network points and triggers alerts when suspicious activity is detected in the network or cloud environments."
-},
+    "id": "53",
+    "question": "What is the difference between HIDS and NIDS?",
+    "answer": "HIDS (Host-based Intrusion Detection System) monitors and analyzes activities within a specific host such as a PC or server. It works by examining internal files and comparing current snapshots to previously taken ones to detect changes, indicating possible attacks.\n\nNIDS (Network-based Intrusion Detection System) monitors network traffic across multiple devices. It is deployed at key network points and triggers alerts when suspicious activity is detected in the network or cloud environments.",
+    "weight": 0.0
+  },
   {
-  "id": "54",
-  "question": "What is the difference between VA (Vulnerability Assessment) and PT (Penetration Testing)?",
-  "answer": "Penetration testing is performed to find vulnerabilities, malicious content, bugs, and risks. It is used to strengthen an organization's security system by simulating real attacks on IT infrastructure. This is an official and ethical process focused on breaching systems to identify weaknesses.\n\nVulnerability assessment, on the other hand, is the process of identifying and evaluating security weaknesses in a system. It involves scanning for known vulnerabilities and assessing their severity, helping organizations to prioritize and address risks before they can be exploited."
-},
+    "id": "54",
+    "question": "What is the difference between VA (Vulnerability Assessment) and PT (Penetration Testing)?",
+    "answer": "Penetration testing is performed to find vulnerabilities, malicious content, bugs, and risks. It is used to strengthen an organization's security system by simulating real attacks on IT infrastructure. This is an official and ethical process focused on breaching systems to identify weaknesses.\n\nVulnerability assessment, on the other hand, is the process of identifying and evaluating security weaknesses in a system. It involves scanning for known vulnerabilities and assessing their severity, helping organizations to prioritize and address risks before they can be exploited.",
+    "weight": 0.0
+  },
   {
-  "id": "55",
-  "question": "What is RSA?",
-  "answer": "The RSA algorithm is an asymmetric encryption algorithm. Asymmetric means that it actually works with two different keys: a public key and a private key. As the name suggests, the public key is shared with everyone, while the private key remains secret."
-},
- {
-  "id": "56",
-  "question": "What is the Blowfish algorithm?",
-  "answer": "Blowfish is an encryption technique developed by Bruce Schneier in 1993 as an alternative to the DES encryption technique. It is considerably faster than DES and provides excellent encryption speed even though no effective cryptanalysis techniques have been discovered so far. It was one of the first secure block ciphers to be patent-free and therefore freely available to everyone."
-},
+    "id": "55",
+    "question": "What is RSA?",
+    "answer": "The RSA algorithm is an asymmetric encryption algorithm. Asymmetric means that it actually works with two different keys: a public key and a private key. As the name suggests, the public key is shared with everyone, while the private key remains secret.",
+    "weight": 0.0
+  },
   {
-  "id": "57",
-  "question": "What is the difference between a vulnerability and an exploit?",
-  "answer": "Vulnerability: A vulnerability is an error in the design or implementation of a system that can be exploited to cause unexpected or undesirable behaviour. There are many ways a computer can become vulnerable to security threats. A common vulnerability is for attackers to exploit system security vulnerabilities to gain access to systems without proper authentication.\nExploit: Exploits are tools that can be used to exploit vulnerabilities. They are created using vulnerabilities. Exploits are often patched by software vendors as soon as they are released. They take the form of software or code that helps control computers and steal network data."
-},
- {
-  "id": "58",
-  "question": "What do you understand by Risk, Vulnerability and threat in a network?",
-  "answer": "Cyber threats are malicious acts aimed at stealing or corrupting data or destroying digital networks and systems. A threat can also be defined as the possibility of a successful cyberattack to gain unethical access to sensitive data on a system.\nVulnerabilities in cybersecurity are deficiencies in system designs, security procedures, internal controls, etc. that can be exploited by cybercriminals. In very rare cases, cyber vulnerabilities are the result of cyberattacks rather than network misconfigurations.\nCyber risk is the potential result of loss or damage to assets or data caused by cyber threats. You can't eliminate risk completely, but you can manage it to a level that meets your organization's risk tolerance. Therefore, our goal is not to build a system without risk but to keep the risk as low as possible."
-},
+    "id": "56",
+    "question": "What is the Blowfish algorithm?",
+    "answer": "Blowfish is an encryption technique developed by Bruce Schneier in 1993 as an alternative to the DES encryption technique. It is considerably faster than DES and provides excellent encryption speed even though no effective cryptanalysis techniques have been discovered so far. It was one of the first secure block ciphers to be patent-free and therefore freely available to everyone.",
+    "weight": 0.0
+  },
+  {
+    "id": "57",
+    "question": "What is the difference between a vulnerability and an exploit?",
+    "answer": "Vulnerability: A vulnerability is an error in the design or implementation of a system that can be exploited to cause unexpected or undesirable behaviour. There are many ways a computer can become vulnerable to security threats. A common vulnerability is for attackers to exploit system security vulnerabilities to gain access to systems without proper authentication.\nExploit: Exploits are tools that can be used to exploit vulnerabilities. They are created using vulnerabilities. Exploits are often patched by software vendors as soon as they are released. They take the form of software or code that helps control computers and steal network data.",
+    "weight": 0.0
+  },
+  {
+    "id": "58",
+    "question": "What do you understand by Risk, Vulnerability and threat in a network?",
+    "answer": "Cyber threats are malicious acts aimed at stealing or corrupting data or destroying digital networks and systems. A threat can also be defined as the possibility of a successful cyberattack to gain unethical access to sensitive data on a system.\nVulnerabilities in cybersecurity are deficiencies in system designs, security procedures, internal controls, etc. that can be exploited by cybercriminals. In very rare cases, cyber vulnerabilities are the result of cyberattacks rather than network misconfigurations.\nCyber risk is the potential result of loss or damage to assets or data caused by cyber threats. You can't eliminate risk completely, but you can manage it to a level that meets your organization's risk tolerance. Therefore, our goal is not to build a system without risk but to keep the risk as low as possible.",
+    "weight": 0.0
+  },
   {
     "id": "59",
     "question": " Explain Phishing and how to prevent it.",
-    "answer": "Phishing is a type of cyber attack. The name phishing comes from the word 'phish', which means fish. Placing bait to catch fish is a common phenomenon. Phishing works similarly. Tricking users or victims into clicking on malicious websites is an unethical practice."
+    "answer": "Phishing is a type of cyber attack. The name phishing comes from the word 'phish', which means fish. Placing bait to catch fish is a common phenomenon. Phishing works similarly. Tricking users or victims into clicking on malicious websites is an unethical practice.",
+    "weight": 0.0
   },
   {
     "id": "60",
     "question": "What do you mean by Forward Secrecy and how does it work?",
-    "answer": "Forward secrecy is a feature of some key agreement protocols that guarantees that the session keys will remain secure even if the server's private key is compromised. Perfect forward secrecy, also known as PFS, is the term used to describe this. The Diffie-Hellman key exchange algorithm is employed to achieve this. "
+    "answer": "Forward secrecy is a feature of some key agreement protocols that guarantees that the session keys will remain secure even if the server's private key is compromised. Perfect forward secrecy, also known as PFS, is the term used to describe this. The Diffie-Hellman key exchange algorithm is employed to achieve this.",
+    "weight": 0.0
   }
 ]

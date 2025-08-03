@@ -1,79 +1,176 @@
-# 🤖 RAG-powered FAQ Chatbot API with Feedback Loop
+RAG-Powered FAQ Chatbot API (me Feedback Loop, Auth & Docker)
 
-Ky projekt ofron një API inteligjente për një **chatbot FAQ**, e cila përdor **Retrieval-Augmented Generation (RAG)** për të gjeneruar përgjigje bazuar në dokumente relevante dhe përmirësohet me kalimin e kohës falë një **sistemi feedback-u nga përdoruesit**.
+Ky projekt është një API moderne për një chatbot të zgjuar që ofron përgjigje të sakta nga një bazë pyetjesh/FAQ duke përdorur Retrieval-Augmented Generation. Përdoruesit regjistrohen, autentikohen me JWT, bëjnë pyetje, marrin përgjigje dhe japin feedback – gjithçka ruhet dhe përdoret për të përmirësuar cilësinë.
 
----
+Përmbajtja
+Funksionalitetet kryesore:
 
-## 📌 Përmbajtja
+•	Si instalohet & niset
+•	Endpoint-et kryesore
+•	Screenshots (Swagger UI)
+•	Testim & Demonstrim
+•	Teknologjitë e përdorura
+•	Struktura e projektit
 
-- [🎯 Qëllimi](#🎯-qëllimi)
-- [⚙️ Teknologjitë](#⚙️-teknologjitë)
-- [📂 Struktura e projektit](#📂-struktura-e-projektit)
-- [🚀 Si ta përdorësh (Docker)](#🚀-si-ta-përdorësh-docker)
-- [🔐 Autentikimi (JWT)](#🔐-autentikimi-jwt)
-- [📡 Endpoint-et](#📡-endpoint-et)
-- [📊 Statistikat e feedback-ut](#📊-statistikat-e-feedback-ut)
-- [🧠 Si funksionon feedback loop](#🧠-si-funksionon-feedback-loop)
-- [📸 Screenshot-e funksionale](#📸-screenshot-e-funksionale)
+Funksionalitetet kryesore:
+•	Regjistrim dhe login me JWT (OAuth2)
+•	Pyetje & përgjigje të mençura nga dataset-i i FAQ-ve (RAG + embeddings)
+•	Feedback për çdo përgjigje
+•	Rritje cilësie në retrieval/response bazuar në feedback
+•	Ruajtje e historikut të bisedës në databazë për çdo user
+•	Rate limiting për siguri nga abuzimi
+•	Ruajtje të sigurt të fjalëkalimeve (bcrypt hash)
+•	Deploy me Docker 
 
 
+Si instalohet & niset:
 
-## 🎯 Qëllimi
+Lokalisht (pa Docker)
+1. Klono projektin:
+git clone https://github.com/DelimetaM/rag_chatbox
+cd rag_chatbox
 
-Të krijohet një **backend API** e thjeshtë, por inteligjente, për një chatbot që:
-- Gjen pyetjet më të ngjashme në një dataset ekzistues (me FAISS + embeddings)
-- Gjeneron përgjigje duke përdorur përmbajtjen e dokumenteve
-- Lejon përdoruesit të japin **feedback**
-- Mban historikun e bisedës
-- Ruhet dhe ekzekutohet përmes **Docker**
+2. Krijo & aktivizo virtualenv:
+python -m venv venv
+source venv/bin/activate  # ose venv\Scripts\activate në Windows
 
----
+3. Instalo varësitë:
+pip install -r requirements.txt
 
-## ⚙️ Teknologjitë
+4. Nise aplikacionin:
+uvicorn app.main:app --reload
+Hape Swagger UI në browser ose Postman:
+http://127.0.0.1:8000/docs
 
-| Teknologjia           | Përdorimi |
-|-----------------------|----------|
-| **FastAPI**           | Ndërtimi i API-së REST |
-| **SentenceTransformers** | Për embeddings semantikë |
-| **FAISS**             | Kërkimi semantik në dokumente |
-| **SQLite**            | Baza e të dhënave lokale |
-| **JWT + OAuth2**      | Autentikim dhe autorizim |
-| **Docker**            | Containerizimi i aplikacionit |
 
----
+Me Docker
 
-## 📂 Struktura e projektit
+1. Ndërto imazhin Docker:
+docker build -t rag_chatbox .
+
+2. Nise me Docker
+docker compose up --build
+
+
+Endpoint-et Kryesore:
+
+/auth/register
+[POST]
+Regjistron një përdorues të ri.
+Auth: JO
+
+/auth/token
+[POST]
+Login dhe merr JWT token.
+Auth: JO
+
+/ask
+[POST]
+Dërgo pyetje, merr përgjigje nga FAQ dhe pyetje të ngjashme.
+Auth: PO (JWT)
+Rate limit: 5 pyetje për minutë.
+
+/feedback
+[POST]
+Jep feedback për një përgjigje.
+Auth: PO (JWT)
+Rate limit: 5 feedback për minutë.
+
+/chat-history
+[GET, DELETE]
+Merr ose fshin historikun e bisedës.
+Auth: PO (JWT)
+
+Të gjitha endpoint-et (përveç register/login) kërkojnë JWT token në header-in Authorization!
+
+
+Screenshots (Swagger UI)
+
+1. Regjistrimi i një përdoruesi të ri
+[Register Success](screenshots/1.2success_registration.png)
+[Register Failed](screenshots/1.failed_registration.png)
+
+2. Login dhe marrje JWT token
+[Successful Login](screenshots/2.successful_login.png)
+[Successful Authentication](screenshots/2.1%20successful_authentication.png)
+
+3. /ask – Pyetje/Response
+[Question](screenshots/3.%20Question.png)
+[Answer](screenshots/3.1%20Answer.png)
+
+4. /feedback – Dërgim feedback
+[Feedback](screenshots/4.%20Feedback.png)
+[Feedback Limit](screenshots/4.1%20Feedback%20Limit.png)
+
+5. /chat-history
+[Chat History](screenshots/5.%20Chat%20History.png)
+[Chat History Cleared](screenshots/5.1%20Chat%20History%20Cleared.png)
+
+
+Testim & Demonstrim
+
+1. Regjistrim
+•	Dërgo POST në /auth/register me JSON:
+{
+  "username": "meti",
+  "email": "meti@email.com",
+  "country": "Albania",
+  "password": "TestPassword123!"
+}
+•	Kontrollo që merr “User registered successfully”.
+
+2. Login
+•	POST /auth/token me username/password.
+•	Kopjo access_token nga përgjigjja.
+
+3. Pyetje (Ask)
+•	POST /ask me JWT në header:
+{
+  "question": "What is ransomware?",
+  "show_related": true
+}
+•	Kontrollo përgjigjen dhe fushën related_questions.
+
+4. Feedback
+•	POST /feedback me JWT në header dhe pyetjen që sapo bëre.
+
+5. Rate limiting
+•	Dërgo më shumë se 5 kërkesa për endpoint në 1 minutë.
+•	Kontrollo që merr error 429.
+
+6. Historiku
+•	GET /chat-history me JWT, kontrollo që shfaqen pyetjet dhe përgjigjet.
+
+
+Teknologjitë e përdorura
+
+•	FastAPI (backend framework)
+•	SQLite (db lokale)
+•	JWT/OAuth2 (auth)
+•	bcrypt (hashing i fjalëkalimeve)
+•	sentence-transformers + faiss (RAG, retrieval)
+•	Docker (deployment)
+•	slowapi (rate limiting)
+•	Swagger UI (dokumentim/testim API)
+
+
+Struktura e projektit
+
 rag_chatbox/
 ├── app/
-│ └── auth/ # Funksione për login dhe token
+│   ├── main.py
+│   ├── limiter.py
+│   └── auth/
 ├── data/
-│ └── database.py # Funksione për SQLite
+│   ├── feedback.db
+│   ├── database.py
+│   └── faq_data.json
 ├── models/
-│ └── request_models.py # Pydantic për validim input-i
+│   └── request_models.py
 ├── routes/
-│ └── endpoints.py # API endpoint-et
-├── services/
-│ └── retrieval.py # FAISS retrieval
-│ └── feedback_loop.py # Përmirësim i rankimit me feedback
-├── feedback.db # SQLite database file
-├── requirements.txt # Varësitë e projektit
-├── dockerfile # Dockerfile për imazhin
-├── .dockerignore # Skedarët që përjashtohen nga Docker
-└── main.py # Pika hyrëse për API-në
-
-🔐 Autentikimi (JWT)
-Endpoint: POST /token
-Jepet username dhe password për të marrë JWT token
-Endpoint-et që kërkojnë autorizim janë të mbrojtura me OAuth2
-
-📊 Statistikat e feedback-ut
-Mesatarja e vlerësimeve
-Numri total i feedback-eve
-Mund të zgjerohet me analiza të tjera
-
-🧠 Si funksionon feedback loop
-Përdoruesi bën një pyetje
-Sistemi rikthen dokumentet më relevante
-Përdoruesi jep një rating
-Pyetja dhe feedback-u ruhen në DB
-Algoritmi feedback_loop.py llogarit peshët për secilin dokument dhe përmirëson retrieval-in në pyetjet e ardhshme
+│   ├── ask.py
+│   ├── feedback.py
+│   └── ...
+├── requirements.txt
+├── Dockerfile
+└── README.md
