@@ -1,7 +1,7 @@
 import os
 import sqlite3
 from fastapi import APIRouter, Depends
-from app.auth.auth import get_current_user
+from app.auth.auth import admin_required  # përdor admin_required për kontroll accessi
 
 router = APIRouter(
     prefix="/stats",
@@ -12,8 +12,8 @@ router = APIRouter(
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(BASE_DIR, "data", "feedback.db")
 
-@router.get("/stats")
-def get_feedback_stats(user: dict = Depends(get_current_user)):
+@router.get("/", dependencies=[Depends(admin_required)])
+def get_feedback_stats():
     try:
         if not os.path.exists(DB_PATH):
             return {

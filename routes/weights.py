@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from app.auth.auth import get_current_user
+from app.auth.auth import admin_required
 import json
 import os
 
@@ -8,12 +8,12 @@ router = APIRouter(
     tags=["Weights"]
 )
 
-# ✅ Rruga per faq_data.json
+# Rruga per faq_data.json
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAQ_PATH = os.path.join(BASE_DIR, "data", "faq_data.json")
 
-@router.get("/")
-def get_weights(user: dict = Depends(get_current_user)):
+@router.get("/", dependencies=[Depends(admin_required)])
+def get_weights():
     with open(FAQ_PATH, "r", encoding="utf-8") as f:
         faq_data = json.load(f)
     return [

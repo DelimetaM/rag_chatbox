@@ -4,6 +4,7 @@ from data.database import init_db
 from app.limiter import limiter  
 from slowapi.errors import RateLimitExceeded
 from fastapi.responses import JSONResponse
+from routes import analytics
 
 app = FastAPI()
 app.state.limiter = limiter
@@ -21,3 +22,4 @@ app.include_router(ask.router)
 app.include_router(feedback.router)
 app.include_router(stats.router)
 app.include_router(weights.router)
+app.include_router(analytics.router)
