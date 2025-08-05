@@ -51,7 +51,7 @@
     "id": "9",
     "question": "Who are black hat hackers and white hat hackers?",
     "answer": "White hat hackers are ethical security experts, while black hat hackers are criminals who exploit vulnerabilities.",
-    "weight": 0.0
+    "weight": 8.0
   },
   {
     "id": "10",

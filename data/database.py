@@ -1,7 +1,9 @@
 import sqlite3
 import os
+import json
 from datetime import datetime
 from services.response_evaluation import compute_quality_score
+from difflib import SequenceMatcher
 
 # HASH password
 from passlib.context import CryptContext
@@ -26,7 +28,7 @@ def init_db():
             rating INTEGER NOT NULL,
             username TEXT,
             quality_score REAL DEFAULT 0,
-            comment TEXT         -- SHTO KOLUMNEN COMMENT!
+            comment TEXT
         )
     """)
 
@@ -44,7 +46,8 @@ def init_db():
             email TEXT,
             country TEXT,
             password TEXT NOT NULL,
-            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+            role TEXT DEFAULT 'user'
         )
     """)
 
@@ -99,6 +102,10 @@ def get_user_by_username(username: str):
         return {"id": row[0], "username": row[1], "password": row[2], "role": row[3]}
     return None
 
+def fuzzy_match(q1, q2, threshold=0.50):
+    """Krahason dy stringje me fuzzy similarity dhe kthen True nëse janë të ngjashme mjaftueshëm."""
+    return SequenceMatcher(None, q1.lower().strip(), q2.lower().strip()).ratio() >= threshold
+
 def insert_feedback(question, answer, rating, username=None, comment=None):
     quality_score = compute_quality_score(question, answer)
     conn = sqlite3.connect(DB_PATH)
@@ -109,6 +116,25 @@ def insert_feedback(question, answer, rating, username=None, comment=None):
     """, (question, answer, rating, username, quality_score, comment))
     conn.commit()
     conn.close()
+    # Pas ruajtjes së feedback, përditëso peshën në faq_data.json
+    update_faq_weight(question, rating)
+
+def update_faq_weight(question, new_weight):
+    # Lexo file-in aktual
+    with open(FAQ_PATH, 'r', encoding='utf-8') as f:
+        faq_data = json.load(f)
+    found = False
+    for item in faq_data:
+        if fuzzy_match(item['question'], question):
+            item['weight'] = float(new_weight)
+            found = True
+            print(f"[DEBUG] U perditesua weight për: {item['question']}")
+            break
+    if found:
+        with open(FAQ_PATH, 'w', encoding='utf-8') as f:
+            json.dump(faq_data, f, indent=2, ensure_ascii=False)
+    else:
+        print("[WARNING] S'u gjet pyetja për update weight!")
 
 def save_chat_history(username: str, question: str, answer: str):
     conn = sqlite3.connect(DB_PATH)
